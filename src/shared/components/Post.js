@@ -15,7 +15,7 @@ function Post({post, index, upVotePost}) {
             <div className="postContainer">
                 <div className="rankContainer">
                 <span className="rank">{index + 1}.</span> 
-                <button className="votearrow-btn" onClick={e => !post.isUpvoted && upVotePost(post.objectID)}><span className="votearrow"></span></button>
+                <button aria-label="up vote this post" className="votearrow-btn" onClick={e => !post.isUpvoted && upVotePost(post.objectID)}><span className="votearrow"></span></button>
                 </div>
                 <div className="titleContainer"> 
                 <a className="storylink" href={post.url}>{post.title}</a>

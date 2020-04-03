@@ -15167,7 +15167,7 @@ var handleRequest = function handleRequest(req, res, next) {
     ));
 
     var initialData = store.getState();
-    res.send("\n        <!DOCTYPE html>\n        <html lang=\"en\">\n          <head>\n            <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n            <title>Hacker News</title>\n            <link rel=\"stylesheet\" href=\"/css/main.css\">\n            <script src=\"/bundle.js\" defer></script>\n            <script>window.__initialData__ = " + __WEBPACK_IMPORTED_MODULE_8_serialize_javascript___default()(initialData) + "</script>\n          </head>\n\n          <body>\n            <div id=\"root\">" + markup + "</div>\n          </body>\n        </html>\n      ");
+    res.send("\n        <!DOCTYPE html>\n        <html lang=\"en\">\n          <head>\n            <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n            <meta name=\"Description\" content=\"This clone of Hackers news app\">\n            <title>Hacker News</title>\n            <link rel=\"stylesheet\" href=\"/css/main.css\">\n            <script src=\"/bundle.js\" defer></script>\n            <script>window.__initialData__ = " + __WEBPACK_IMPORTED_MODULE_8_serialize_javascript___default()(initialData) + "</script>\n          </head>\n\n          <body>\n            <div id=\"root\">" + markup + "</div>\n          </body>\n        </html>\n      ");
   }).catch(next);
 };
 app.get("/", handleRequest);
@@ -68904,7 +68904,7 @@ function Post(_ref) {
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'button',
-                    { className: 'votearrow-btn', onClick: function onClick(e) {
+                    { 'aria-label': 'up vote this post', className: 'votearrow-btn', onClick: function onClick(e) {
                             return !post.isUpvoted && upVotePost(post.objectID);
                         }, __source: {
                             fileName: _jsxFileName,
