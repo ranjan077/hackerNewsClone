@@ -6679,6 +6679,8 @@ function reducer() {
   switch (action.type) {
     case 'NEWS_FETCH_SUCCESS':
       return { news: [].concat(_toConsumableArray(state.news), _toConsumableArray(action.payload)) };
+    case 'FILTERED_NEWS_SUCCESS':
+      return { news: [].concat(_toConsumableArray(action.payload)) };
     case 'UP_VOTE_POST':
       {
         var votedPost = state.news.find(function (post) {
@@ -6761,12 +6763,28 @@ var upVotePost = function upVotePost(payload) {
     };
 };
 
+var filteredNews = function filteredNews(payload) {
+    return {
+        type: __WEBPACK_IMPORTED_MODULE_0__actionsTypes_NewsListActionTypes__["a" /* default */].FILTERED_NEWS,
+        payload: payload
+    };
+};
+
+var getFilteredNewsSuccess = function getFilteredNewsSuccess(payload) {
+    return {
+        type: __WEBPACK_IMPORTED_MODULE_0__actionsTypes_NewsListActionTypes__["a" /* default */].FILTERED_NEWS_SUCCESS,
+        payload: payload
+    };
+};
+
 var actions = {
     getNews: getNews,
     getNewsSuccess: getNewsSuccess,
     getNewsFail: getNewsFail,
     getMoreNews: getMoreNews,
-    upVotePost: upVotePost
+    upVotePost: upVotePost,
+    filteredNews: filteredNews,
+    getFilteredNewsSuccess: getFilteredNewsSuccess
 };
 /* harmony default export */ __webpack_exports__["a"] = (actions);
 
@@ -41721,7 +41739,7 @@ exports['default'] = thunk;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__actions_NewsListAction__ = __webpack_require__(48);
 
 
-var _marked = [fetchNews, mySaga].map(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark);
+var _marked = [fetchNews, fetchFilteredNews, mySaga].map(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark);
 
 
 
@@ -41772,24 +41790,72 @@ function fetchNews(action) {
    }, _marked[0], this, [[0, 10]]);
 }
 
-function mySaga() {
-   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function mySaga$(_context2) {
+function fetchFilteredNews(action) {
+   var response, news;
+   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function fetchFilteredNews$(_context2) {
       while (1) {
          switch (_context2.prev = _context2.next) {
             case 0:
-               _context2.next = 2;
-               return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* takeLatest */])("NEWS_FETCH_REQUESTED", fetchNews);
+               _context2.prev = 0;
+               _context2.next = 3;
+               return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["a" /* call */])(__WEBPACK_IMPORTED_MODULE_2__Api_api__["a" /* default */].fetchNews, action.payload);
 
-            case 2:
-               _context2.next = 4;
-               return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* takeLatest */])("NEWS_FETCH_MORE_REQUESTED", fetchNews);
+            case 3:
+               response = _context2.sent;
+               news = response.hits.map(function (data) {
+                  return {
+                     objectID: data.objectID,
+                     title: data.title,
+                     url: data.url,
+                     createdAt: data['created_at'],
+                     points: data.points,
+                     author: data.author,
+                     commentsCount: data['num_comments'],
+                     isUpvoted: false
+                  };
+               });
+               _context2.next = 7;
+               return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["b" /* put */])(__WEBPACK_IMPORTED_MODULE_3__actions_NewsListAction__["a" /* default */].getFilteredNewsSuccess(news));
 
-            case 4:
+            case 7:
+               return _context2.abrupt('return', response);
+
+            case 10:
+               _context2.prev = 10;
+               _context2.t0 = _context2['catch'](0);
+               _context2.next = 14;
+               return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["b" /* put */])(__WEBPACK_IMPORTED_MODULE_3__actions_NewsListAction__["a" /* default */].getNewsFail(_context2.t0));
+
+            case 14:
             case 'end':
                return _context2.stop();
          }
       }
-   }, _marked[1], this);
+   }, _marked[1], this, [[0, 10]]);
+}
+
+function mySaga() {
+   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function mySaga$(_context3) {
+      while (1) {
+         switch (_context3.prev = _context3.next) {
+            case 0:
+               _context3.next = 2;
+               return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* takeLatest */])("NEWS_FETCH_REQUESTED", fetchNews);
+
+            case 2:
+               _context3.next = 4;
+               return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* takeLatest */])("NEWS_FETCH_MORE_REQUESTED", fetchNews);
+
+            case 4:
+               _context3.next = 6;
+               return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* takeLatest */])("FILTERED_NEWS", fetchFilteredNews);
+
+            case 6:
+            case 'end':
+               return _context3.stop();
+         }
+      }
+   }, _marked[2], this);
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (mySaga);
@@ -43569,7 +43635,9 @@ var newsListActionTypes = {
     NEWS_FETCH_SUCCESS: 'NEWS_FETCH_SUCCESS',
     NEWS_FETCH_FAIL: 'NEWS_FETCH_FAIL',
     NEWS_FETCH_MORE_REQUESTED: 'NEWS_FETCH_MORE_REQUESTED',
-    UP_VOTE_POST: 'UP_VOTE_POST'
+    UP_VOTE_POST: 'UP_VOTE_POST',
+    FILTERED_NEWS: 'FILTERED_NEWS',
+    FILTERED_NEWS_SUCCESS: 'FILTERED_NEWS_SUCCESS'
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (newsListActionTypes);
@@ -43673,16 +43741,16 @@ var App = function (_Component) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__news__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages__ = __webpack_require__(135);
 
 
 var routes = [{
   path: "/",
   exact: true,
-  component: __WEBPACK_IMPORTED_MODULE_0__news__["a" /* default */]
+  component: __WEBPACK_IMPORTED_MODULE_0__pages__["a" /* default */]
 }, {
   path: "/news",
-  component: __WEBPACK_IMPORTED_MODULE_0__news__["a" /* default */]
+  component: __WEBPACK_IMPORTED_MODULE_0__pages__["a" /* default */]
 }];
 
 /* harmony default export */ __webpack_exports__["a"] = (routes);
@@ -43696,11 +43764,11 @@ var routes = [{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__NewsList__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__reducers__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_NewsList__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Filter__ = __webpack_require__(166);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__actions_NewsListAction__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Api_api__ = __webpack_require__(47);
-var _jsxFileName = "/Users/rnagara5/Desktop/HackerNewsClone /hackerNewsClone/src/shared/news/index.js";
+var _jsxFileName = "/Users/rnagara5/Desktop/HackerNewsClone /hackerNewsClone/src/shared/pages/index.js";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -43787,12 +43855,19 @@ var Post = function (_Component) {
               __self: this
             },
             "Hacker News Clone"
-          )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Filter__["a" /* default */], Object.assign({}, this.props.actions, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 38
+            },
+            __self: this
+          }))
         ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__NewsList__["a" /* default */], Object.assign({ news: news }, this.props.actions, {
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_NewsList__["a" /* default */], Object.assign({ news: news }, this.props.actions, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 39
+            lineNumber: 40
           },
           __self: this
         })),
@@ -43801,7 +43876,7 @@ var Post = function (_Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 40
+              lineNumber: 41
             },
             __self: this
           },
@@ -43809,7 +43884,7 @@ var Post = function (_Component) {
             "button",
             { className: "more-btn", onClick: this.requestMoreNews, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 41
+                lineNumber: 42
               },
               __self: this
             },
@@ -43847,7 +43922,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Post__ = __webpack_require__(137);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NewsList_css__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NewsList_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__NewsList_css__);
-var _jsxFileName = "/Users/rnagara5/Desktop/HackerNewsClone /hackerNewsClone/src/shared/news/NewsList.js";
+var _jsxFileName = "/Users/rnagara5/Desktop/HackerNewsClone /hackerNewsClone/src/shared/components/NewsList.js";
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
@@ -43893,7 +43968,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_javascript_time_ago__ = __webpack_require__(138);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_javascript_time_ago_locale_en__ = __webpack_require__(152);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_javascript_time_ago_locale_en___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_javascript_time_ago_locale_en__);
-var _jsxFileName = '/Users/rnagara5/Desktop/HackerNewsClone /hackerNewsClone/src/shared/news/Post.js';
+var _jsxFileName = '/Users/rnagara5/Desktop/HackerNewsClone /hackerNewsClone/src/shared/components/Post.js';
 
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
@@ -45713,6 +45788,65 @@ module.exports = {"year":"{0}yr","month":"{0}mo","week":"{0}wk","day":"{0}d","ho
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 165 */,
+/* 166 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _jsxFileName = "/Users/rnagara5/Desktop/HackerNewsClone /hackerNewsClone/src/shared/components/Filter.js";
+
+
+function Filter(_ref) {
+    var filteredNews = _ref.filteredNews;
+
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "div",
+        { className: "filterConatiner", __source: {
+                fileName: _jsxFileName,
+                lineNumber: 6
+            },
+            __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "button",
+            { className: "no-background-btn", __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 7
+                },
+                __self: this
+            },
+            "Top"
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "span",
+            { className: "pipe", __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 8
+                },
+                __self: this
+            },
+            " | "
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "button",
+            { className: "no-background-btn", onClick: function onClick(e) {
+                    return filteredNews("numericFilters=created_at_i > " + (Date.now() - 10000000) / 1000);
+                }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 9
+                },
+                __self: this
+            },
+            "New"
+        )
+    );
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (Filter);
 
 /***/ })
 /******/ ]);

@@ -1,4 +1,4 @@
-import News from "./news";
+import News from "./pages";
 
 const routes = [
   {

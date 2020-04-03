@@ -11,6 +11,7 @@
   padding: 3px;
 }
 .header h1 {
+  display: inline-block;
   font-family: Verdana, Geneva, sans-serif;
   font-size: 10pt;
   font-weight: bold;
@@ -91,6 +92,16 @@
   cursor: pointer;
 }
 
+.filterConatiner {
+  display: inline-block;
+}
+
+.no-background-btn {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
 @media only screen and (max-width: 600px) {
   .header {
     text-align: center;
