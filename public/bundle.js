@@ -6696,7 +6696,7 @@ function reducer() {
 
 var Api = {
     fetchNews: function fetchNews(params) {
-        var url = 'http://hn.algolia.com/api/v1/search';
+        var url = 'https://hn.algolia.com/api/v1/search';
         if (params) {
             url = url + ("?" + params);
         }
