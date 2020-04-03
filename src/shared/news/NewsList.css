@@ -1,0 +1,92 @@
+.mainContainer {
+  background-color: #f6f6ef;
+  border-bottom: 5px solid #ff6600;
+}
+.newslist {
+  padding: 10px;
+}
+
+.header {
+  background-color: #ff6600;
+  padding: 3px;
+}
+.header h1 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  margin: 0 9px;
+}
+.title {
+  margin: 0;
+}
+
+.rank {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10pt;
+  color: #828282;
+}
+
+.votearrow {
+  width: 10px;
+  height: 10px;
+  border: 0px;
+  margin: 2px 2px 0px;
+  background: url(/media/grayarrow2x.gif) no-repeat;
+  background-size: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.storylink {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10pt;
+  text-decoration: none;
+  color: #000000;
+}
+
+.sub-info {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 7pt;
+  color: #828282;
+}
+
+.titleContainer{
+  flex: 1;
+}
+.postContainer {
+  display: flex;
+  margin-bottom: 10px;
+}
+.postContainer:after {
+  display: block;
+  content:"";
+  clear: both;
+}
+
+.more-btn {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10pt;
+  color: #828282;
+  margin-left: 45px;
+  margin-bottom: 20px;
+}
+
+.hide-btn {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 7pt;
+  color: #828282;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    text-align: center;
+  }
+}
