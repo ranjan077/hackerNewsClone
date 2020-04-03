@@ -2,12 +2,12 @@ import React, {useState} from "react";
 import Post from './Post';
 import "./NewsList.css";
 
-export default React.memo(function NewsList({ news }) {
+export default React.memo(function NewsList({ news, ...props }) {
   return (
     <div className="newslist">
       {news &&
         news.filter(post => post.title).map((post, index) =>
-          <Post post={post} index={index} key={post.objectID}/>
+          <Post post={post} index={index} key={post.objectID} {...props}/>
         )}
     </div>
   );

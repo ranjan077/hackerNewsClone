@@ -36,7 +36,7 @@ class Post extends Component {
         <div className="header">
           <h1>Hacker News Clone</h1>
         </div>
-        <NewsList news={news} />
+        <NewsList news={news} {...this.props.actions}/>
         <div>
           <button className="more-btn" onClick={this.requestMoreNews}>More</button>
         </div>

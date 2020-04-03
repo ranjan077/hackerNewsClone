@@ -3,6 +3,7 @@ const newsListActionTypes = {
     NEWS_FETCH_SUCCESS: 'NEWS_FETCH_SUCCESS',
     NEWS_FETCH_FAIL:'NEWS_FETCH_FAIL',
     NEWS_FETCH_MORE_REQUESTED: 'NEWS_FETCH_MORE_REQUESTED',
+    UP_VOTE_POST: 'UP_VOTE_POST',
 };
 
 export default newsListActionTypes;

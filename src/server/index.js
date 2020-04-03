@@ -26,9 +26,29 @@ const handleRequest = (req, res, next) => {
   }, []);
 
   Promise.all(promises)
-    .then((resposne) => {
+    .then((response) => {
       const context = {};
-      const store = configureStore({news: resposne[0] ? resposne[0].hits : []});
+      let storeValue = {};
+      if(response[0].hits) {
+        let news = response[0].hits.map((data) => {
+          return {
+             objectID: data.objectID,
+             title: data.title,
+             url: data.url,
+             createdAt: data['created_at'],
+             points: data.points,
+             author: data.author,
+             commentsCount: data['num_comments'],
+             isUpvoted: false,
+          }
+       });
+       storeValue = {
+         news,
+       }
+      } else {
+        storeValue = response[0];
+      }
+      const store = configureStore(storeValue);
       const markup = renderToString(
         <Provider store={store}>
           <StaticRouter location={req.url} context={context}>

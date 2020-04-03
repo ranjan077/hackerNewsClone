@@ -22,10 +22,16 @@ const getMoreNews = (payload) => ({
     payload,
 });
 
+const upVotePost = (payload) => ({
+    type: newsListActionTypes.UP_VOTE_POST,
+    payload
+});
+
 const actions = {
     getNews,
     getNewsSuccess,
     getNewsFail,
     getMoreNews,
+    upVotePost,
 };
 export default actions;

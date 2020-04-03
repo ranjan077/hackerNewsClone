@@ -12820,8 +12820,18 @@ function reducer() {
 
   switch (action.type) {
     case 'NEWS_FETCH_SUCCESS':
-      // return { ...state, news: action.payload };
       return { news: [].concat(_toConsumableArray(state.news), _toConsumableArray(action.payload)) };
+    case 'UP_VOTE_POST':
+      {
+        var votedPost = state.news.find(function (post) {
+          return post.objectID === action.payload;
+        });
+        if (votedPost) {
+          votedPost.points = votedPost.points + 1;
+          votedPost.isUpvoted = true;
+        }
+        return { news: [].concat(_toConsumableArray(state.news)) };
+      }
 
     default:
       return state;
@@ -12863,11 +12873,19 @@ var getMoreNews = function getMoreNews(payload) {
     };
 };
 
+var upVotePost = function upVotePost(payload) {
+    return {
+        type: __WEBPACK_IMPORTED_MODULE_0__actionsTypes_NewsListActionTypes__["a" /* default */].UP_VOTE_POST,
+        payload: payload
+    };
+};
+
 var actions = {
     getNews: getNews,
     getNewsSuccess: getNewsSuccess,
     getNewsFail: getNewsFail,
-    getMoreNews: getMoreNews
+    getMoreNews: getMoreNews,
+    upVotePost: upVotePost
 };
 /* harmony default export */ __webpack_exports__["a"] = (actions);
 
@@ -15081,14 +15099,34 @@ var handleRequest = function handleRequest(req, res, next) {
     return acc;
   }, []);
 
-  Promise.all(promises).then(function (resposne) {
+  Promise.all(promises).then(function (response) {
     var context = {};
-    var store = Object(__WEBPACK_IMPORTED_MODULE_10__shared_configureStore__["a" /* default */])({ news: resposne[0] ? resposne[0].hits : [] });
+    var storeValue = {};
+    if (response[0].hits) {
+      var news = response[0].hits.map(function (data) {
+        return {
+          objectID: data.objectID,
+          title: data.title,
+          url: data.url,
+          createdAt: data['created_at'],
+          points: data.points,
+          author: data.author,
+          commentsCount: data['num_comments'],
+          isUpvoted: false
+        };
+      });
+      storeValue = {
+        news: news
+      };
+    } else {
+      storeValue = response[0];
+    }
+    var store = Object(__WEBPACK_IMPORTED_MODULE_10__shared_configureStore__["a" /* default */])(storeValue);
     var markup = Object(__WEBPACK_IMPORTED_MODULE_5_react_dom_server__["renderToString"])(__WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_6_react_redux__["a" /* Provider */],
       { store: store, __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 53
         },
         __self: _this
       },
@@ -15096,14 +15134,14 @@ var handleRequest = function handleRequest(req, res, next) {
         __WEBPACK_IMPORTED_MODULE_7_react_router_dom__["b" /* StaticRouter */],
         { location: req.url, context: context, __source: {
             fileName: _jsxFileName,
-            lineNumber: 34
+            lineNumber: 54
           },
           __self: _this
         },
         __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__shared_App__["a" /* default */], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 35
+            lineNumber: 55
           },
           __self: _this
         })
@@ -68675,12 +68713,13 @@ var Post = function (_Component) {
             "Hacker News Clone"
           )
         ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__NewsList__["a" /* default */], { news: news, __source: {
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__NewsList__["a" /* default */], Object.assign({ news: news }, this.props.actions, {
+          __source: {
             fileName: _jsxFileName,
             lineNumber: 39
           },
           __self: this
-        }),
+        })),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "div",
           {
@@ -68734,13 +68773,17 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NewsList_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__NewsList_css__);
 var _jsxFileName = "/Users/rnagara5/Desktop/HackerNewsClone /hackerNewsClone/src/shared/news/NewsList.js";
 
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+
 
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react___default.a.memo(function NewsList(_ref) {
   var _this = this;
 
-  var news = _ref.news;
+  var news = _ref.news,
+      props = _objectWithoutProperties(_ref, ["news"]);
 
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     "div",
@@ -68753,12 +68796,13 @@ var _jsxFileName = "/Users/rnagara5/Desktop/HackerNewsClone /hackerNewsClone/src
     news && news.filter(function (post) {
       return post.title;
     }).map(function (post, index) {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Post__["a" /* default */], { post: post, index: index, key: post.objectID, __source: {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Post__["a" /* default */], Object.assign({ post: post, index: index, key: post.objectID }, props, {
+        __source: {
           fileName: _jsxFileName,
           lineNumber: 10
         },
         __self: _this
-      });
+      }));
     })
   );
 }));
@@ -68783,7 +68827,8 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
 
 function Post(_ref) {
     var post = _ref.post,
-        index = _ref.index;
+        index = _ref.index,
+        upVotePost = _ref.upVotePost;
 
     __WEBPACK_IMPORTED_MODULE_1_javascript_time_ago__["a" /* default */].addLocale(__WEBPACK_IMPORTED_MODULE_2_javascript_time_ago_locale_en___default.a);
     var timeAgo = new __WEBPACK_IMPORTED_MODULE_1_javascript_time_ago__["a" /* default */]('en-US');
@@ -68796,11 +68841,12 @@ function Post(_ref) {
     if (hide) {
         return '';
     }
+
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { key: post.objectID, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 13
+                lineNumber: 14
             },
             __self: this
         },
@@ -68808,7 +68854,7 @@ function Post(_ref) {
             'div',
             { className: 'postContainer', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 14
+                    lineNumber: 15
                 },
                 __self: this
             },
@@ -68816,7 +68862,7 @@ function Post(_ref) {
                 'div',
                 { className: 'rankContainer', __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 15
+                        lineNumber: 16
                     },
                     __self: this
                 },
@@ -68824,25 +68870,36 @@ function Post(_ref) {
                     'span',
                     { className: 'rank', __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 16
+                            lineNumber: 17
                         },
                         __self: this
                     },
                     index + 1,
                     '.'
                 ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'votearrow', __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 17
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'button',
+                    { className: 'votearrow-btn', onClick: function onClick(e) {
+                            return !post.isUpvoted && upVotePost(post.objectID);
+                        }, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 18
+                        },
+                        __self: this
                     },
-                    __self: this
-                })
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'votearrow', __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 18
+                        },
+                        __self: this
+                    })
+                )
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'titleContainer', __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 19
+                        lineNumber: 20
                     },
                     __self: this
                 },
@@ -68850,7 +68907,7 @@ function Post(_ref) {
                     'a',
                     { className: 'storylink', href: post.url, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 20
+                            lineNumber: 21
                         },
                         __self: this
                     },
@@ -68860,7 +68917,7 @@ function Post(_ref) {
                     'div',
                     { className: 'sub-info', __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 21
+                            lineNumber: 22
                         },
                         __self: this
                     },
@@ -68868,7 +68925,7 @@ function Post(_ref) {
                         'span',
                         { className: 'points', __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 22
+                                lineNumber: 23
                             },
                             __self: this
                         },
@@ -68879,7 +68936,7 @@ function Post(_ref) {
                         'span',
                         { className: 'author', __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 23
+                                lineNumber: 24
                             },
                             __self: this
                         },
@@ -68890,17 +68947,17 @@ function Post(_ref) {
                         'span',
                         { className: 'time', __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 24
+                                lineNumber: 25
                             },
                             __self: this
                         },
-                        timeAgo.format(new Date(post['created_at']))
+                        timeAgo.format(new Date(post.createdAt))
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'span',
                         { className: 'pipe', __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 25
+                                lineNumber: 26
                             },
                             __self: this
                         },
@@ -68912,7 +68969,7 @@ function Post(_ref) {
                                 return setHide(!hide);
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 26
+                                lineNumber: 27
                             },
                             __self: this
                         },
@@ -68922,7 +68979,7 @@ function Post(_ref) {
                         'span',
                         { className: 'pipe', __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 27
+                                lineNumber: 28
                             },
                             __self: this
                         },
@@ -68932,12 +68989,12 @@ function Post(_ref) {
                         'span',
                         { className: 'comments', __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 28
+                                lineNumber: 29
                             },
                             __self: this
                         },
                         ' ',
-                        post.num_comments,
+                        post.commentsCount,
                         ' comments'
                     )
                 )
@@ -70584,7 +70641,8 @@ var newsListActionTypes = {
     NEWS_FETCH_REQUESTED: 'NEWS_FETCH_REQUESTED',
     NEWS_FETCH_SUCCESS: 'NEWS_FETCH_SUCCESS',
     NEWS_FETCH_FAIL: 'NEWS_FETCH_FAIL',
-    NEWS_FETCH_MORE_REQUESTED: 'NEWS_FETCH_MORE_REQUESTED'
+    NEWS_FETCH_MORE_REQUESTED: 'NEWS_FETCH_MORE_REQUESTED',
+    UP_VOTE_POST: 'UP_VOTE_POST'
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (newsListActionTypes);
@@ -71470,7 +71528,7 @@ var _marked = [fetchNews, mySaga].map(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_
 
 // worker Saga: will be fired on USER_FETCH_REQUESTED actions
 function fetchNews(action) {
-   var response;
+   var response, news;
    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function fetchNews$(_context) {
       while (1) {
          switch (_context.prev = _context.next) {
@@ -71481,24 +71539,36 @@ function fetchNews(action) {
 
             case 3:
                response = _context.sent;
-               _context.next = 6;
-               return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["b" /* put */])(__WEBPACK_IMPORTED_MODULE_3__actions_NewsListAction__["a" /* default */].getNewsSuccess(response.hits));
+               news = response.hits.map(function (data) {
+                  return {
+                     objectID: data.objectID,
+                     title: data.title,
+                     url: data.url,
+                     createdAt: data['created_at'],
+                     points: data.points,
+                     author: data.author,
+                     commentsCount: data['num_comments'],
+                     isUpvoted: false
+                  };
+               });
+               _context.next = 7;
+               return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["b" /* put */])(__WEBPACK_IMPORTED_MODULE_3__actions_NewsListAction__["a" /* default */].getNewsSuccess(news));
 
-            case 6:
+            case 7:
                return _context.abrupt('return', response);
 
-            case 9:
-               _context.prev = 9;
+            case 10:
+               _context.prev = 10;
                _context.t0 = _context['catch'](0);
-               _context.next = 13;
+               _context.next = 14;
                return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["b" /* put */])(__WEBPACK_IMPORTED_MODULE_3__actions_NewsListAction__["a" /* default */].getNewsFail(_context.t0));
 
-            case 13:
+            case 14:
             case 'end':
                return _context.stop();
          }
       }
-   }, _marked[0], this, [[0, 9]]);
+   }, _marked[0], this, [[0, 10]]);
 }
 
 function mySaga() {

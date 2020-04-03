@@ -6,14 +6,19 @@ import actions from "../actions/NewsListAction";
 function* fetchNews(action) {
    try {
       const response = yield call(Api.fetchNews, action.payload);
-      /*const news = response.map((data) => {
+      const news = response.hits.map((data) => {
          return {
+            objectID: data.objectID,
             title: data.title,
+            url: data.url,
+            createdAt: data['created_at'],
             points: data.points,
             author: data.author,
+            commentsCount: data['num_comments'],
+            isUpvoted: false,
          }
-      });*/
-      yield put(actions.getNewsSuccess(response.hits));
+      });
+      yield put(actions.getNewsSuccess(news));
       return response;
    } catch (e) {
       yield put(actions.getNewsFail(e));
