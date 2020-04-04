@@ -6,7 +6,6 @@ import "isomorphic-fetch";
 import { renderToString } from "react-dom/server";
 import { Provider } from "react-redux";
 import { StaticRouter, matchPath } from "react-router-dom";
-import serialize from "serialize-javascript";
 import routes from "../shared/routes";
 import configureStore from "../shared/configureStore";
 import App from "../shared/App";
@@ -67,7 +66,7 @@ const handleRequest = (req, res, next) => {
             <title>Hacker News</title>
             <link rel="stylesheet" href="/css/main.css">
             <script src="/bundle.js" defer></script>
-            <script>window.__initialData__ = ${serialize(initialData)}</script>
+            <script>window.__initialData__ = ${JSON.stringify(initialData)}</script>
           </head>
 
           <body>
