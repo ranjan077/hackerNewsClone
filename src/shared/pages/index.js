@@ -6,7 +6,7 @@ import Filter from '../components/Filter';
 import actions from "../actions/NewsListAction";
 import Api from '../Api/api'
 
-class NewsPage extends Component {
+export class NewsPage extends Component {
   static initialServerFecth() {
     return Api.fetchNews();
   }
