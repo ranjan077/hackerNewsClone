@@ -1,11 +1,11 @@
-import React , {useState} from 'react';
+import React from 'react';
 import TimeAgo from 'javascript-time-ago';
 import en from 'javascript-time-ago/locale/en';
 
 function Post({post, index, upVotePost}) {
     TimeAgo.addLocale(en);
     const timeAgo = new TimeAgo('en-US');
-    const [hide, setHide] = useState(false);
+    const [hide, setHide] = React.useState(false);
     if(hide) {
         return '';
     }
