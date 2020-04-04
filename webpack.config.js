@@ -86,7 +86,10 @@ const serverConfig = {
         query: { presets: ["react-app"] }
       }
     ]
-  }
+  },
+  plugins: [
+    new MinifyPlugin({}, {})
+  ]
 };
 
 module.exports = [browserConfig, serverConfig];
