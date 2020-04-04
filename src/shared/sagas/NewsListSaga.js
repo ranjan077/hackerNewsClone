@@ -1,3 +1,4 @@
+import "regenerator-runtime/runtime";
 import { call, put, takeEvery, takeLatest } from 'redux-saga/effects';
 import Api from '../Api/api';
 import actions from "../actions/NewsListAction";

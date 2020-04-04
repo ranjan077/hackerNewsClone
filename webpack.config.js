@@ -39,7 +39,7 @@ const browserConfig = {
         test: /js$/,
         exclude: /(node_modules)/,
         loader: "babel-loader",
-        query: { presets: ["react-app"] }
+        query: { presets: ["@babel/react"] }
       }
     ]
   },
@@ -47,7 +47,7 @@ const browserConfig = {
     new ExtractTextPlugin({
       filename: "public/css/[name].css"
     }),
-    new MinifyPlugin({}, {})
+    // new MinifyPlugin({}, {})
   ]
 };
 
@@ -83,12 +83,12 @@ const serverConfig = {
         test: /js$/,
         exclude: /(node_modules)/,
         loader: "babel-loader",
-        query: { presets: ["react-app"] }
+        query: { presets: ["@babel/react"] }
       }
     ]
   },
   plugins: [
-    new MinifyPlugin({}, {})
+    // new MinifyPlugin({}, {})
   ]
 };
 

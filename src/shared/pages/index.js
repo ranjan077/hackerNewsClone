@@ -6,7 +6,7 @@ import Filter from '../components/Filter';
 import actions from "../actions/NewsListAction";
 import Api from '../Api/api'
 
-class Post extends Component {
+class NewsPage extends Component {
   static initialServerFecth() {
     return Api.fetchNews();
   }
@@ -21,7 +21,7 @@ class Post extends Component {
     if (news && news.length === 0) {
       this.props.actions.getNews();
     }
-  }ß
+  }
   requestMoreNews = () => {
     this.setState((prevState) => {
       return {...prevState, page: prevState.page +1};
@@ -57,4 +57,4 @@ const mapDispatchToProps = dispatch => ({
 });
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Post);
+export default connect(mapStateToProps, mapDispatchToProps)(NewsPage);
