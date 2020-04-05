@@ -1,7 +1,8 @@
 
 
 // Reducer
-export default function reducer(state = {news: []}, action) {
+export const initialState = {news: []};
+export default function reducer(state = initialState, action) {
   switch (action.type) {
     case 'NEWS_FETCH_SUCCESS':
       return {news: [...state.news,...action.payload]};
