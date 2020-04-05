@@ -12739,15 +12739,15 @@ function createMemoryHistory(props) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages__ = __webpack_require__(267);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_NewsPage__ = __webpack_require__(267);
 
 var routes = [{
   path: "/",
   exact: true,
-  component: __WEBPACK_IMPORTED_MODULE_0__pages__["a" /* default */]
+  component: __WEBPACK_IMPORTED_MODULE_0__pages_NewsPage__["a" /* default */]
 }, {
   path: "/news",
-  component: __WEBPACK_IMPORTED_MODULE_0__pages__["a" /* default */]
+  component: __WEBPACK_IMPORTED_MODULE_0__pages_NewsPage__["a" /* default */]
 }];
 /* harmony default export */ __webpack_exports__["a"] = (routes);
 
@@ -68079,6 +68079,7 @@ module.exports = hoistNonReactStatics;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export NewsPage */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(75);
@@ -68116,7 +68117,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 
 
 
@@ -68272,10 +68272,10 @@ function Post(_ref) {
   __WEBPACK_IMPORTED_MODULE_1_javascript_time_ago__["a" /* default */].addLocale(__WEBPACK_IMPORTED_MODULE_2_javascript_time_ago_locale_en___default.a);
   var timeAgo = new __WEBPACK_IMPORTED_MODULE_1_javascript_time_ago__["a" /* default */]('en-US');
 
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_0_react__["useState"])(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      hide = _useState2[0],
-      setHide = _useState2[1];
+  var _React$useState = __WEBPACK_IMPORTED_MODULE_0_react___default.a.useState(false),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      hide = _React$useState2[0],
+      setHide = _React$useState2[1];
 
   if (hide) {
     return '';
@@ -69971,7 +69971,7 @@ function Filter(_ref) {
   }, "Top"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
     className: "pipe"
   }, " | "), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
-    className: "no-background-btn",
+    className: "no-background-btn new-btn",
     onClick: function onClick(e) {
       return filteredNews("numericFilters=created_at_i > ".concat((Date.now() - 10000000) / 1000));
     }

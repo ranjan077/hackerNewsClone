@@ -47,7 +47,7 @@ const browserConfig = {
     new ExtractTextPlugin({
       filename: "public/css/[name].css"
     }),
-    new MinifyPlugin()
+    // new MinifyPlugin()
   ]
 };
 
@@ -88,7 +88,7 @@ const serverConfig = {
     ]
   },
   plugins: [
-    new MinifyPlugin()
+    // new MinifyPlugin()
   ]
 };
 
