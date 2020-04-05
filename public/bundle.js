@@ -626,8 +626,8 @@ function warning(condition, message) {
 /* unused harmony export X */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return put; });
 /* unused harmony export Z */
-/* unused harmony export _ */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return CPS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return all; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return CPS; });
 /* unused harmony export a0 */
 /* unused harmony export a1 */
 /* unused harmony export a2 */
@@ -636,31 +636,31 @@ function warning(condition, message) {
 /* unused harmony export a5 */
 /* unused harmony export a6 */
 /* unused harmony export a7 */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return CANCEL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return check; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return ACTION_CHANNEL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return expanding; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return CANCELLED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return FLUSH; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return SET_CONTEXT; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return internalErr; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return getMetaInfo; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return kTrue; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return createAllStyleChildCallbacks; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return createEmptyArray; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return none; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return once; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return assignWithSymbols; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return makeIterator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return remove; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return shouldComplete; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return noop; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return flatMap; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return getLocation; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return createSetContextWarning; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return asyncIteratorSymbol; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return shouldCancel; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return shouldTerminate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return CANCEL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return check; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return ACTION_CHANNEL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return expanding; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return CANCELLED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return FLUSH; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return SET_CONTEXT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return internalErr; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return getMetaInfo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return kTrue; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return createAllStyleChildCallbacks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return createEmptyArray; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return none; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return once; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return assignWithSymbols; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return makeIterator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return remove; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return shouldComplete; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return noop; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return flatMap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return getLocation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return createSetContextWarning; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return asyncIteratorSymbol; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return shouldCancel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return shouldTerminate; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__redux_saga_symbols__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_extends__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__redux_saga_is__ = __webpack_require__(18);
@@ -5320,7 +5320,7 @@ var symbol = function symbol(pattern) {
   };
 };
 var wildcard = function wildcard() {
-  return __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["F" /* k */];
+  return __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["G" /* k */];
 };
 function matcher(pattern) {
   // prettier-ignore
@@ -5344,30 +5344,30 @@ var INVALID_BUFFER = 'invalid buffer passed to channel factory function';
 var UNDEFINED_INPUT_ERROR = "Saga or channel was provided with an undefined action\nHints:\n  - check that your Action Creator returns a non-undefined value\n  - if the Saga was started using runSaga, check that your subscribe source provides the action to its listeners";
 function channel(buffer$1) {
   if (buffer$1 === void 0) {
-    buffer$1 = Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["z" /* e */])();
+    buffer$1 = Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["A" /* e */])();
   }
 
   var closed = false;
   var takers = [];
 
   if (process.env.NODE_ENV !== 'production') {
-    Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["x" /* c */])(buffer$1, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["b" /* buffer */], INVALID_BUFFER);
+    Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["y" /* c */])(buffer$1, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["b" /* buffer */], INVALID_BUFFER);
   }
 
   function checkForbiddenStates() {
     if (closed && takers.length) {
-      throw Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["D" /* i */])(CLOSED_CHANNEL_WITH_TAKERS);
+      throw Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["E" /* i */])(CLOSED_CHANNEL_WITH_TAKERS);
     }
 
     if (takers.length && !buffer$1.isEmpty()) {
-      throw Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["D" /* i */])('Cannot have pending takers with non empty buffer');
+      throw Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["E" /* i */])('Cannot have pending takers with non empty buffer');
     }
   }
 
   function put(input) {
     if (process.env.NODE_ENV !== 'production') {
       checkForbiddenStates();
-      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["x" /* c */])(input, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["h" /* notUndef */], UNDEFINED_INPUT_ERROR);
+      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["y" /* c */])(input, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["h" /* notUndef */], UNDEFINED_INPUT_ERROR);
     }
 
     if (closed) {
@@ -5385,7 +5385,7 @@ function channel(buffer$1) {
   function take(cb) {
     if (process.env.NODE_ENV !== 'production') {
       checkForbiddenStates();
-      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["x" /* c */])(cb, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["e" /* func */], "channel.take's callback must be a function");
+      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["y" /* c */])(cb, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["e" /* func */], "channel.take's callback must be a function");
     }
 
     if (closed && buffer$1.isEmpty()) {
@@ -5396,7 +5396,7 @@ function channel(buffer$1) {
       takers.push(cb);
 
       cb.cancel = function () {
-        Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["M" /* r */])(takers, cb);
+        Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["N" /* r */])(takers, cb);
       };
     }
   }
@@ -5404,7 +5404,7 @@ function channel(buffer$1) {
   function flush(cb) {
     if (process.env.NODE_ENV !== 'production') {
       checkForbiddenStates();
-      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["x" /* c */])(cb, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["e" /* func */], "channel.flush' callback must be a function");
+      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["y" /* c */])(cb, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["e" /* func */], "channel.flush' callback must be a function");
     }
 
     if (closed && buffer$1.isEmpty()) {
@@ -5443,7 +5443,7 @@ function channel(buffer$1) {
 }
 function eventChannel(subscribe, buffer) {
   if (buffer === void 0) {
-    buffer = Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["I" /* n */])();
+    buffer = Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["J" /* n */])();
   }
 
   var closed = false;
@@ -5474,10 +5474,10 @@ function eventChannel(subscribe, buffer) {
   });
 
   if (process.env.NODE_ENV !== 'production') {
-    Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["x" /* c */])(unsubscribe, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["e" /* func */], 'in eventChannel: subscribe should return a function to unsubscribe');
+    Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["y" /* c */])(unsubscribe, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["e" /* func */], 'in eventChannel: subscribe should return a function to unsubscribe');
   }
 
-  unsubscribe = Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["J" /* o */])(unsubscribe);
+  unsubscribe = Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["K" /* o */])(unsubscribe);
 
   if (closed) {
     unsubscribe();
@@ -5498,7 +5498,7 @@ function multicastChannel() {
 
   function checkForbiddenStates() {
     if (closed && nextTakers.length) {
-      throw Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["D" /* i */])(CLOSED_CHANNEL_WITH_TAKERS);
+      throw Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["E" /* i */])(CLOSED_CHANNEL_WITH_TAKERS);
     }
   }
 
@@ -5526,7 +5526,7 @@ function multicastChannel() {
   return _ref = {}, _ref[__WEBPACK_IMPORTED_MODULE_0__redux_saga_symbols__["e" /* MULTICAST */]] = true, _ref.put = function put(input) {
     if (process.env.NODE_ENV !== 'production') {
       checkForbiddenStates();
-      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["x" /* c */])(input, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["h" /* notUndef */], UNDEFINED_INPUT_ERROR);
+      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["y" /* c */])(input, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["h" /* notUndef */], UNDEFINED_INPUT_ERROR);
     }
 
     if (closed) {
@@ -5565,9 +5565,9 @@ function multicastChannel() {
     cb[__WEBPACK_IMPORTED_MODULE_0__redux_saga_symbols__["d" /* MATCH */]] = matcher;
     ensureCanMutateNextTakers();
     nextTakers.push(cb);
-    cb.cancel = Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["J" /* o */])(function () {
+    cb.cancel = Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["K" /* o */])(function () {
       ensureCanMutateNextTakers();
-      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["M" /* r */])(nextTakers, cb);
+      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["N" /* r */])(nextTakers, cb);
     });
   }, _ref.close = close, _ref;
 }
@@ -5620,7 +5620,7 @@ function getIteratorMetaInfo(iterator, fn) {
     };
   }
 
-  return Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["E" /* j */])(fn);
+  return Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["F" /* j */])(fn);
 }
 
 function createTaskIterator(_ref) {
@@ -5654,11 +5654,11 @@ function createTaskIterator(_ref) {
       }
     };
 
-    return Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["L" /* q */])(next);
+    return Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["M" /* q */])(next);
   } catch (err) {
     // do not bubble up synchronous failures for detached forks
     // instead create a failed task. See #152 and #441
-    return Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["L" /* q */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["M" /* q */])(function () {
       throw err;
     });
   }
@@ -5739,7 +5739,7 @@ function runCallEffect(env, _ref4, cb, _ref5) {
 
     if (Object(__WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["f" /* iterator */])(result)) {
       // resolve iterator
-      proc(env, result, task.context, current, Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["E" /* j */])(fn),
+      proc(env, result, task.context, current, Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["F" /* j */])(fn),
       /* isRoot */
       false, cb);
       return;
@@ -5819,7 +5819,7 @@ function runJoinEffect(env, taskOrTasks, cb, _ref9) {
       };
 
       cb.cancel = function () {
-        if (taskToJoin.isRunning()) Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["M" /* r */])(taskToJoin.joiners, joiner);
+        if (taskToJoin.isRunning()) Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["N" /* r */])(taskToJoin.joiners, joiner);
       };
 
       taskToJoin.joiners.push(joiner);
@@ -5838,7 +5838,7 @@ function runJoinEffect(env, taskOrTasks, cb, _ref9) {
       return;
     }
 
-    var childCallbacks = Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["G" /* l */])(taskOrTasks, cb);
+    var childCallbacks = Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["H" /* l */])(taskOrTasks, cb);
     taskOrTasks.forEach(function (t, i) {
       joinSingleTask(t, childCallbacks[i]);
     });
@@ -5877,7 +5877,7 @@ function runAllEffect(env, effects, cb, _ref11) {
     return;
   }
 
-  var childCallbacks = Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["G" /* l */])(effects, cb);
+  var childCallbacks = Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["H" /* l */])(effects, cb);
   keys.forEach(function (key) {
     digestEffect(effects[key], effectId, childCallbacks[key], key);
   });
@@ -5887,7 +5887,7 @@ function runRaceEffect(env, effects, cb, _ref12) {
   var digestEffect = _ref12.digestEffect;
   var effectId = current;
   var keys = Object.keys(effects);
-  var response = Object(__WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["a" /* array */])(effects) ? Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["H" /* m */])(keys.length) : {};
+  var response = Object(__WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["a" /* array */])(effects) ? Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["I" /* m */])(keys.length) : {};
   var childCbs = {};
   var completed = false;
   keys.forEach(function (key) {
@@ -5896,7 +5896,7 @@ function runRaceEffect(env, effects, cb, _ref12) {
         return;
       }
 
-      if (isErr || Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["N" /* s */])(res)) {
+      if (isErr || Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["O" /* s */])(res)) {
         // Race Auto cancellation
         cb.cancel();
         cb(res, isErr);
@@ -5908,7 +5908,7 @@ function runRaceEffect(env, effects, cb, _ref12) {
       }
     };
 
-    chCbAtKey.cancel = __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["O" /* t */];
+    chCbAtKey.cancel = __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["P" /* t */];
     childCbs[key] = chCbAtKey;
   });
 
@@ -5984,11 +5984,11 @@ function runGetContextEffect(env, prop, cb, _ref16) {
 
 function runSetContextEffect(env, props, cb, _ref17) {
   var task = _ref17.task;
-  Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["K" /* p */])(task.context, props);
+  Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["L" /* p */])(task.context, props);
   cb();
 }
 
-var effectRunnerMap = (_effectRunnerMap = {}, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["r" /* T */]] = runTakeEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["n" /* P */]] = runPutEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["a" /* A */]] = runAllEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["p" /* R */]] = runRaceEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["c" /* C */]] = runCallEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["v" /* a */]] = runCPSEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["f" /* F */]] = runForkEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["h" /* J */]] = runJoinEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["w" /* b */]] = runCancelEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["q" /* S */]] = runSelectEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["y" /* d */]] = runChannelEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["A" /* f */]] = runCancelledEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["B" /* g */]] = runFlushEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["g" /* G */]] = runGetContextEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["C" /* h */]] = runSetContextEffect, _effectRunnerMap);
+var effectRunnerMap = (_effectRunnerMap = {}, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["r" /* T */]] = runTakeEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["n" /* P */]] = runPutEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["a" /* A */]] = runAllEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["p" /* R */]] = runRaceEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["c" /* C */]] = runCallEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["w" /* a */]] = runCPSEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["f" /* F */]] = runForkEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["h" /* J */]] = runJoinEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["x" /* b */]] = runCancelEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["q" /* S */]] = runSelectEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["z" /* d */]] = runChannelEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["B" /* f */]] = runCancelledEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["C" /* g */]] = runFlushEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["g" /* G */]] = runGetContextEffect, _effectRunnerMap[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["D" /* h */]] = runSetContextEffect, _effectRunnerMap);
 
 /**
  Used to track a parent task and its forks
@@ -6030,8 +6030,8 @@ function forkQueue(mainTask, onAbort, cont) {
         return;
       }
 
-      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["M" /* r */])(tasks, task);
-      task.cont = __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["O" /* t */];
+      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["N" /* r */])(tasks, task);
+      task.cont = __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["P" /* t */];
 
       if (isErr) {
         abort(res);
@@ -6055,7 +6055,7 @@ function forkQueue(mainTask, onAbort, cont) {
 
     completed = true;
     tasks.forEach(function (t) {
-      t.cont = __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["O" /* t */];
+      t.cont = __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["P" /* t */];
       t.cancel();
     });
     tasks = [];
@@ -6076,7 +6076,7 @@ function formatLocation(fileName, lineNumber) {
 }
 
 function effectLocationAsString(effect) {
-  var location = Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["Q" /* v */])(effect);
+  var location = Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["R" /* v */])(effect);
 
   if (location) {
     var code = location.code,
@@ -6101,7 +6101,7 @@ function sagaLocationAsString(sagaMeta) {
 }
 
 function cancelledTasksAsString(sagaStack) {
-  var cancelledTasks = Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["P" /* u */])(function (i) {
+  var cancelledTasks = Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["Q" /* u */])(function (i) {
     return i.cancelledTasks;
   }, sagaStack);
 
@@ -6152,7 +6152,7 @@ function newTask(env, mainTask, parentContext, parentEffectId, meta, isRoot, con
   var _task;
 
   if (cont === void 0) {
-    cont = __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["O" /* t */];
+    cont = __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["P" /* t */];
   }
 
   var status = RUNNING;
@@ -6227,10 +6227,10 @@ function newTask(env, mainTask, parentContext, parentEffectId, meta, isRoot, con
 
   function setContext(props) {
     if (process.env.NODE_ENV !== 'production') {
-      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["x" /* c */])(props, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["i" /* object */], Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["R" /* w */])('task', props));
+      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["y" /* c */])(props, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["i" /* object */], Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["S" /* w */])('task', props));
     }
 
-    Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["K" /* p */])(context, props);
+    Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["L" /* p */])(context, props);
   }
 
   function toPromise() {
@@ -6264,7 +6264,7 @@ function newTask(env, mainTask, parentContext, parentEffectId, meta, isRoot, con
 }
 
 function proc(env, iterator$1, parentContext, parentEffectId, meta, isRoot, cont) {
-  if (process.env.NODE_ENV !== 'production' && iterator$1[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["S" /* x */]]) {
+  if (process.env.NODE_ENV !== 'production' && iterator$1[__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["T" /* x */]]) {
     throw new Error("redux-saga doesn't support async generators, please use only regular ones");
   }
 
@@ -6275,7 +6275,7 @@ function proc(env, iterator$1, parentContext, parentEffectId, meta, isRoot, cont
     on it. It allows propagating cancellation to child effects
   **/
 
-  next.cancel = __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["O" /* t */];
+  next.cancel = __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["P" /* t */];
   /** Creates a main task to track the main flow */
 
   var mainTask = {
@@ -6335,7 +6335,7 @@ function proc(env, iterator$1, parentContext, parentEffectId, meta, isRoot, cont
         result = iterator$1.throw(arg); // user handled the error, we can clear bookkept values
 
         clear();
-      } else if (Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["T" /* y */])(arg)) {
+      } else if (Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["U" /* y */])(arg)) {
         /**
           getting TASK_CANCEL automatically cancels the main task
           We can get this value here
@@ -6357,7 +6357,7 @@ function proc(env, iterator$1, parentContext, parentEffectId, meta, isRoot, cont
           done: true,
           value: __WEBPACK_IMPORTED_MODULE_0__redux_saga_symbols__["j" /* TASK_CANCEL */]
         };
-      } else if (Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["U" /* z */])(arg)) {
+      } else if (Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["V" /* z */])(arg)) {
         // We get TERMINATE flag, i.e. by taking from a channel that ended using `take` (and not `takem` used to trap End of channels)
         result = Object(__WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["e" /* func */])(iterator$1.return) ? iterator$1.return() : {
           done: true
@@ -6443,7 +6443,7 @@ function proc(env, iterator$1, parentContext, parentEffectId, meta, isRoot, cont
       }
 
       effectSettled = true;
-      cb.cancel = __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["O" /* t */]; // defensive measure
+      cb.cancel = __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["P" /* t */]; // defensive measure
 
       if (env.sagaMonitor) {
         if (isErr) {
@@ -6461,7 +6461,7 @@ function proc(env, iterator$1, parentContext, parentEffectId, meta, isRoot, cont
     } // tracks down the current cancel
 
 
-    currCb.cancel = __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["O" /* t */]; // setup cancellation logic on the parent cb
+    currCb.cancel = __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["P" /* t */]; // setup cancellation logic on the parent cb
 
     cb.cancel = function () {
       // prevents cancelling an already completed effect
@@ -6472,7 +6472,7 @@ function proc(env, iterator$1, parentContext, parentEffectId, meta, isRoot, cont
       effectSettled = true;
       currCb.cancel(); // propagates cancel downward
 
-      currCb.cancel = __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["O" /* t */]; // defensive measure
+      currCb.cancel = __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["P" /* t */]; // defensive measure
 
       env.sagaMonitor && env.sagaMonitor.effectCancelled(effectId);
     };
@@ -6496,7 +6496,7 @@ function runSaga(_ref, saga) {
       onError = _ref$onError === void 0 ? __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["b" /* B */] : _ref$onError;
 
   if (process.env.NODE_ENV !== 'production') {
-    Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["x" /* c */])(saga, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["e" /* func */], NON_GENERATOR_ERR);
+    Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["y" /* c */])(saga, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["e" /* func */], NON_GENERATOR_ERR);
   }
 
   for (var _len = arguments.length, args = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
@@ -6506,19 +6506,19 @@ function runSaga(_ref, saga) {
   var iterator$1 = saga.apply(void 0, args);
 
   if (process.env.NODE_ENV !== 'production') {
-    Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["x" /* c */])(iterator$1, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["f" /* iterator */], NON_GENERATOR_ERR);
+    Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["y" /* c */])(iterator$1, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["f" /* iterator */], NON_GENERATOR_ERR);
   }
 
   var effectId = nextSagaId();
 
   if (sagaMonitor) {
     // monitors are expected to have a certain interface, let's fill-in any missing ones
-    sagaMonitor.rootSagaStarted = sagaMonitor.rootSagaStarted || __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["O" /* t */];
-    sagaMonitor.effectTriggered = sagaMonitor.effectTriggered || __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["O" /* t */];
-    sagaMonitor.effectResolved = sagaMonitor.effectResolved || __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["O" /* t */];
-    sagaMonitor.effectRejected = sagaMonitor.effectRejected || __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["O" /* t */];
-    sagaMonitor.effectCancelled = sagaMonitor.effectCancelled || __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["O" /* t */];
-    sagaMonitor.actionDispatched = sagaMonitor.actionDispatched || __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["O" /* t */];
+    sagaMonitor.rootSagaStarted = sagaMonitor.rootSagaStarted || __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["P" /* t */];
+    sagaMonitor.effectTriggered = sagaMonitor.effectTriggered || __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["P" /* t */];
+    sagaMonitor.effectResolved = sagaMonitor.effectResolved || __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["P" /* t */];
+    sagaMonitor.effectRejected = sagaMonitor.effectRejected || __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["P" /* t */];
+    sagaMonitor.effectCancelled = sagaMonitor.effectCancelled || __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["P" /* t */];
+    sagaMonitor.actionDispatched = sagaMonitor.actionDispatched || __WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["P" /* t */];
     sagaMonitor.rootSagaStarted({
       effectId: effectId,
       saga: saga,
@@ -6528,22 +6528,22 @@ function runSaga(_ref, saga) {
 
   if (process.env.NODE_ENV !== 'production') {
     if (Object(__WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["h" /* notUndef */])(dispatch)) {
-      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["x" /* c */])(dispatch, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["e" /* func */], 'dispatch must be a function');
+      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["y" /* c */])(dispatch, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["e" /* func */], 'dispatch must be a function');
     }
 
     if (Object(__WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["h" /* notUndef */])(getState)) {
-      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["x" /* c */])(getState, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["e" /* func */], 'getState must be a function');
+      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["y" /* c */])(getState, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["e" /* func */], 'getState must be a function');
     }
 
     if (Object(__WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["h" /* notUndef */])(effectMiddlewares)) {
       var MIDDLEWARE_TYPE_ERROR = 'effectMiddlewares must be an array of functions';
-      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["x" /* c */])(effectMiddlewares, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["a" /* array */], MIDDLEWARE_TYPE_ERROR);
+      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["y" /* c */])(effectMiddlewares, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["a" /* array */], MIDDLEWARE_TYPE_ERROR);
       effectMiddlewares.forEach(function (effectMiddleware) {
-        return Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["x" /* c */])(effectMiddleware, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["e" /* func */], MIDDLEWARE_TYPE_ERROR);
+        return Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["y" /* c */])(effectMiddleware, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["e" /* func */], MIDDLEWARE_TYPE_ERROR);
       });
     }
 
-    Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["x" /* c */])(onError, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["e" /* func */], 'onError passed to the redux-saga is not a function!');
+    Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["y" /* c */])(onError, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["e" /* func */], 'onError passed to the redux-saga is not a function!');
   }
 
   var finalizeRunEffect;
@@ -6573,7 +6573,7 @@ function runSaga(_ref, saga) {
     finalizeRunEffect: finalizeRunEffect
   };
   return immediately(function () {
-    var task = proc(env, iterator$1, context, effectId, Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["E" /* j */])(saga),
+    var task = proc(env, iterator$1, context, effectId, Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["F" /* j */])(saga),
     /* isRoot */
     true, undefined);
 
@@ -6597,7 +6597,7 @@ function sagaMiddlewareFactory(_temp) {
   var boundRunSaga;
 
   if (process.env.NODE_ENV !== 'production') {
-    Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["x" /* c */])(channel, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["c" /* channel */], 'options.channel passed to the Saga middleware is not a channel');
+    Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["y" /* c */])(channel, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["c" /* channel */], 'options.channel passed to the Saga middleware is not a channel');
   }
 
   function sagaMiddleware(_ref2) {
@@ -6634,10 +6634,10 @@ function sagaMiddlewareFactory(_temp) {
 
   sagaMiddleware.setContext = function (props) {
     if (process.env.NODE_ENV !== 'production') {
-      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["x" /* c */])(props, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["i" /* object */], Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["R" /* w */])('sagaMiddleware', props));
+      Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["y" /* c */])(props, __WEBPACK_IMPORTED_MODULE_3__redux_saga_is__["i" /* object */], Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["S" /* w */])('sagaMiddleware', props));
     }
 
-    Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["K" /* p */])(context, props);
+    Object(__WEBPACK_IMPORTED_MODULE_4__io_6de156f3_js__["L" /* p */])(context, props);
   };
 
   return sagaMiddleware;
@@ -41299,6 +41299,7 @@ exports['default'] = thunk;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export initialState */
 /* harmony export (immutable) */ __webpack_exports__["a"] = reducer;
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
@@ -41313,10 +41314,11 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 // Reducer
+var initialState = {
+  news: []
+};
 function reducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
-    news: []
-  };
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
@@ -41356,6 +41358,9 @@ function reducer() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export watchFetchNews */
+/* unused harmony export watchFetchMoreNews */
+/* unused harmony export watchFilteredNews */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_regenerator_runtime_runtime__ = __webpack_require__(120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_regenerator_runtime_runtime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_regenerator_runtime_runtime__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__ = __webpack_require__(121);
@@ -41363,7 +41368,10 @@ function reducer() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__actions_NewsListAction__ = __webpack_require__(46);
 var _marked = /*#__PURE__*/regeneratorRuntime.mark(fetchNews),
     _marked2 = /*#__PURE__*/regeneratorRuntime.mark(fetchFilteredNews),
-    _marked3 = /*#__PURE__*/regeneratorRuntime.mark(mySaga);
+    _marked3 = /*#__PURE__*/regeneratorRuntime.mark(watchFetchNews),
+    _marked4 = /*#__PURE__*/regeneratorRuntime.mark(watchFetchMoreNews),
+    _marked5 = /*#__PURE__*/regeneratorRuntime.mark(watchFilteredNews),
+    _marked6 = /*#__PURE__*/regeneratorRuntime.mark(newsListSaga);
 
 
 
@@ -41378,7 +41386,7 @@ function fetchNews(action) {
         case 0:
           _context.prev = 0;
           _context.next = 3;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["a" /* call */])(__WEBPACK_IMPORTED_MODULE_2__Api_api__["a" /* default */].fetchNews, action.payload);
+          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["b" /* call */])(__WEBPACK_IMPORTED_MODULE_2__Api_api__["a" /* default */].fetchNews, action.payload);
 
         case 3:
           response = _context.sent;
@@ -41395,7 +41403,7 @@ function fetchNews(action) {
             };
           });
           _context.next = 7;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["b" /* put */])(__WEBPACK_IMPORTED_MODULE_3__actions_NewsListAction__["a" /* default */].getNewsSuccess(news));
+          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* put */])(__WEBPACK_IMPORTED_MODULE_3__actions_NewsListAction__["a" /* default */].getNewsSuccess(news));
 
         case 7:
           return _context.abrupt("return", response);
@@ -41404,7 +41412,7 @@ function fetchNews(action) {
           _context.prev = 10;
           _context.t0 = _context["catch"](0);
           _context.next = 14;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["b" /* put */])(__WEBPACK_IMPORTED_MODULE_3__actions_NewsListAction__["a" /* default */].getNewsFail(_context.t0));
+          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* put */])(__WEBPACK_IMPORTED_MODULE_3__actions_NewsListAction__["a" /* default */].getNewsFail(_context.t0));
 
         case 14:
         case "end":
@@ -41422,7 +41430,7 @@ function fetchFilteredNews(action) {
         case 0:
           _context2.prev = 0;
           _context2.next = 3;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["a" /* call */])(__WEBPACK_IMPORTED_MODULE_2__Api_api__["a" /* default */].fetchNews, action.payload);
+          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["b" /* call */])(__WEBPACK_IMPORTED_MODULE_2__Api_api__["a" /* default */].fetchNews, action.payload);
 
         case 3:
           response = _context2.sent;
@@ -41439,7 +41447,7 @@ function fetchFilteredNews(action) {
             };
           });
           _context2.next = 7;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["b" /* put */])(__WEBPACK_IMPORTED_MODULE_3__actions_NewsListAction__["a" /* default */].getFilteredNewsSuccess(news));
+          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* put */])(__WEBPACK_IMPORTED_MODULE_3__actions_NewsListAction__["a" /* default */].getFilteredNewsSuccess(news));
 
         case 7:
           return _context2.abrupt("return", response);
@@ -41448,7 +41456,7 @@ function fetchFilteredNews(action) {
           _context2.prev = 10;
           _context2.t0 = _context2["catch"](0);
           _context2.next = 14;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["b" /* put */])(__WEBPACK_IMPORTED_MODULE_3__actions_NewsListAction__["a" /* default */].getNewsFail(_context2.t0));
+          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* put */])(__WEBPACK_IMPORTED_MODULE_3__actions_NewsListAction__["a" /* default */].getNewsFail(_context2.t0));
 
         case 14:
         case "end":
@@ -41458,31 +41466,69 @@ function fetchFilteredNews(action) {
   }, _marked2, null, [[0, 10]]);
 }
 
-function mySaga() {
-  return regeneratorRuntime.wrap(function mySaga$(_context3) {
+function watchFetchNews() {
+  return regeneratorRuntime.wrap(function watchFetchNews$(_context3) {
     while (1) {
       switch (_context3.prev = _context3.next) {
         case 0:
           _context3.next = 2;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* takeLatest */])("NEWS_FETCH_REQUESTED", fetchNews);
+          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* takeLatest */])("NEWS_FETCH_REQUESTED", fetchNews);
 
         case 2:
-          _context3.next = 4;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* takeLatest */])("NEWS_FETCH_MORE_REQUESTED", fetchNews);
-
-        case 4:
-          _context3.next = 6;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* takeLatest */])("FILTERED_NEWS", fetchFilteredNews);
-
-        case 6:
         case "end":
           return _context3.stop();
       }
     }
   }, _marked3);
 }
+function watchFetchMoreNews() {
+  return regeneratorRuntime.wrap(function watchFetchMoreNews$(_context4) {
+    while (1) {
+      switch (_context4.prev = _context4.next) {
+        case 0:
+          _context4.next = 2;
+          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* takeLatest */])("NEWS_FETCH_MORE_REQUESTED", fetchNews);
 
-/* harmony default export */ __webpack_exports__["a"] = (mySaga);
+        case 2:
+        case "end":
+          return _context4.stop();
+      }
+    }
+  }, _marked4);
+}
+function watchFilteredNews() {
+  return regeneratorRuntime.wrap(function watchFilteredNews$(_context5) {
+    while (1) {
+      switch (_context5.prev = _context5.next) {
+        case 0:
+          _context5.next = 2;
+          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* takeLatest */])("FILTERED_NEWS", fetchFilteredNews);
+
+        case 2:
+        case "end":
+          return _context5.stop();
+      }
+    }
+  }, _marked5);
+}
+
+function newsListSaga() {
+  return regeneratorRuntime.wrap(function newsListSaga$(_context6) {
+    while (1) {
+      switch (_context6.prev = _context6.next) {
+        case 0:
+          _context6.next = 2;
+          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["a" /* all */])([Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* fork */])(watchFetchNews), Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* fork */])(watchFetchMoreNews), Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* fork */])(watchFilteredNews)]);
+
+        case 2:
+        case "end":
+          return _context6.stop();
+      }
+    }
+  }, _marked6);
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (newsListSaga);
 
 /***/ }),
 /* 120 */
@@ -42228,6 +42274,8 @@ try {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__redux_saga_core_effects__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__redux_saga_core_effects__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__redux_saga_core_effects__["c"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_0__redux_saga_core_effects__["d"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_0__redux_saga_core_effects__["e"]; });
 
 
 
@@ -42239,7 +42287,7 @@ try {
 /* WEBPACK VAR INJECTION */(function(process) {/* unused harmony export debounce */
 /* unused harmony export retry */
 /* unused harmony export takeEvery */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return takeLatest$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return takeLatest$1; });
 /* unused harmony export takeLeading */
 /* unused harmony export throttle */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__redux_saga_symbols__ = __webpack_require__(7);
@@ -42247,19 +42295,19 @@ try {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__redux_saga_is__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__io_6de156f3_js__ = __webpack_require__(11);
 /* unused harmony reexport actionChannel */
-/* unused harmony reexport all */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__io_6de156f3_js__["v"]; });
 /* unused harmony reexport apply */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__io_6de156f3_js__["l"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__io_6de156f3_js__["l"]; });
 /* unused harmony reexport cancel */
 /* unused harmony reexport cancelled */
 /* unused harmony reexport cps */
 /* unused harmony reexport delay */
 /* unused harmony reexport effectTypes */
 /* unused harmony reexport flush */
-/* unused harmony reexport fork */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_3__io_6de156f3_js__["j"]; });
 /* unused harmony reexport getContext */
 /* unused harmony reexport join */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__io_6de156f3_js__["u"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__io_6de156f3_js__["u"]; });
 /* unused harmony reexport putResolve */
 /* unused harmony reexport race */
 /* unused harmony reexport select */
@@ -42323,7 +42371,7 @@ function fsmIterator(fsm, startState, name) {
     }
   }
 
-  return Object(__WEBPACK_IMPORTED_MODULE_3__io_6de156f3_js__["L" /* q */])(next, function (error) {
+  return Object(__WEBPACK_IMPORTED_MODULE_3__io_6de156f3_js__["M" /* q */])(next, function (error) {
     return next(null, error);
   }, name);
 }
@@ -42649,8 +42697,8 @@ function debounceHelper(delayLength, patternOrChannel, worker) {
 }
 
 var validateTakeEffect = function validateTakeEffect(fn, patternOrChannel, worker) {
-  Object(__WEBPACK_IMPORTED_MODULE_3__io_6de156f3_js__["x" /* c */])(patternOrChannel, __WEBPACK_IMPORTED_MODULE_2__redux_saga_is__["h" /* notUndef */], fn.name + " requires a pattern or channel");
-  Object(__WEBPACK_IMPORTED_MODULE_3__io_6de156f3_js__["x" /* c */])(worker, __WEBPACK_IMPORTED_MODULE_2__redux_saga_is__["h" /* notUndef */], fn.name + " requires a saga parameter");
+  Object(__WEBPACK_IMPORTED_MODULE_3__io_6de156f3_js__["y" /* c */])(patternOrChannel, __WEBPACK_IMPORTED_MODULE_2__redux_saga_is__["h" /* notUndef */], fn.name + " requires a pattern or channel");
+  Object(__WEBPACK_IMPORTED_MODULE_3__io_6de156f3_js__["y" /* c */])(worker, __WEBPACK_IMPORTED_MODULE_2__redux_saga_is__["h" /* notUndef */], fn.name + " requires a saga parameter");
 };
 
 function takeEvery$1(patternOrChannel, worker) {
@@ -42688,8 +42736,8 @@ function takeLeading$1(patternOrChannel, worker) {
 }
 function throttle$1(ms, pattern, worker) {
   if (process.env.NODE_ENV !== 'production') {
-    Object(__WEBPACK_IMPORTED_MODULE_3__io_6de156f3_js__["x" /* c */])(pattern, __WEBPACK_IMPORTED_MODULE_2__redux_saga_is__["h" /* notUndef */], 'throttle requires a pattern');
-    Object(__WEBPACK_IMPORTED_MODULE_3__io_6de156f3_js__["x" /* c */])(worker, __WEBPACK_IMPORTED_MODULE_2__redux_saga_is__["h" /* notUndef */], 'throttle requires a saga parameter');
+    Object(__WEBPACK_IMPORTED_MODULE_3__io_6de156f3_js__["y" /* c */])(pattern, __WEBPACK_IMPORTED_MODULE_2__redux_saga_is__["h" /* notUndef */], 'throttle requires a pattern');
+    Object(__WEBPACK_IMPORTED_MODULE_3__io_6de156f3_js__["y" /* c */])(worker, __WEBPACK_IMPORTED_MODULE_2__redux_saga_is__["h" /* notUndef */], 'throttle requires a saga parameter');
   }
 
   for (var _len4 = arguments.length, args = new Array(_len4 > 3 ? _len4 - 3 : 0), _key4 = 3; _key4 < _len4; _key4++) {
