@@ -3,7 +3,7 @@ import compression from 'compression';
 import cors from "cors";
 import React from "react";
 import "isomorphic-fetch";
-import { renderToStaticNodeStream } from "react-dom/server";
+import { renderToString } from "react-dom/server";
 import { Provider } from "react-redux";
 import { StaticRouter, matchPath } from "react-router-dom";
 import routes from "../shared/routes";
@@ -48,7 +48,7 @@ const handleRequest = (req, res, next) => {
         storeValue = response[0];
       }
       const store = configureStore(storeValue);
-      const markup = renderToStaticNodeStream(
+      const markup = renderToString(
         <Provider store={store}>
           <StaticRouter location={req.url} context={context}>
             <App />
