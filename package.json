@@ -43,7 +43,7 @@
     "fetch-mock": "^9.3.1",
     "file-loader": "^0.11.2",
     "jest": "^25.2.7",
-    "jest-transform-css": "^2.0.0",
+    "jest-transform-css": "^6.0.0",
     "nodemon": "^1.11.0",
     "postcss-loader": "^2.0.6",
     "redux-api-middleware": "^3.2.1",
